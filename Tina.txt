@@ -25,9 +25,9 @@ commit c5eeccbb8472b6eaba13813205546891c9dcdd97 (origin/master, origin/HEAD)
 Author: 534987692 <49134575+534987692@users.noreply.github.com>
 Date:   Sat Jan 18 14:50:14 2020 +0800
 ————————————————————
-git show ba3ab086a5c1c0857202b06e64f1f7cdc083dec9 //查看该commit id代表的操作内容
+git show ba3ab086a5c1c0857202b06e64f1f7cdc083dec9 //查看该commit id代表的操作内容//选最上面的
 ————————————————————
-如果提交commit之后发现有错误，可以用reset命令把文件撤回
+如果提交commit之后发现有错误，可以用reset命令把文件撤回//选最下面的
 git reset c5eeccbb8472b6eaba13813205546891c9dcdd97
 ____________________________________________________
 把当前所有东西都再次添加进去
@@ -35,6 +35,8 @@ git add .
 _____________________________________________________
 push 文件到远端
 git push
+___________________________________
+cmd里面cls清空界面
 ————————————————————
 pull文件从远端更新
 git pull
@@ -42,4 +44,37 @@ git pull
 git clone (这里是复制的SSH密钥) other
 就会在工作区创建other文件，并把东西下载下来
 ————————————————————
-cmd里面cls清空界面
+创建分支
+git branch branch01
+__________________________
+查看分支
+git checkout branch1
+________________________
+但是在提交文件push时会发现提示并未设置远端branch,
+所以要设置远端branch，同时push
+git push --set-upstream origin branch01
+****************下面是显示结果（表示在分支branch01前又创建了一个远端branch01）******************
+To github.com:534987692/demo.git
+ * [new branch]      branch01 -> branch01
+Branch 'branch01' set up to track remote branch 'branch01' from 'origin'.
+——————————————————————————————————
+git checkout -b branch02
+表示检查并创建新的分支branch02
+————————————————————————————————
+git checkout master
+表示切换到主分支
+——————————————————————————
+git merge branch01
+表示把branch01的文件合并融入到当前分支
+——————————————————————
+在同过idea解决合并的矛盾问题时打开当前的文件，点击下方菜单栏的Terminal，可以直接输入git status,查看当前情况
+————————————————————
+然后再项目根目录点击右键，选择Git，然后看到很多语句
+选择resolve conflicts… （revert表示回滚）
+然后双击yours(masters),就会loading file
+loading完之后，就会弹出窗口，可以看到不同分支的版本，进行修改。最后apply
+————————————————————
+当有不希望被管理的文件时，打开idea的看到根目录下的.idea文件，右键—>Git—>Repository—>ignore
+或者，点击.gitignore文件，在最上面加上一行：.idea/
+
+
