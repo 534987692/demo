@@ -25,12 +25,26 @@ commit c5eeccbb8472b6eaba13813205546891c9dcdd97 (origin/master, origin/HEAD)
 Author: 534987692 <49134575+534987692@users.noreply.github.com>
 Date:   Sat Jan 18 14:50:14 2020 +0800
 ————————————————————
-git show ba3ab086a5c1c0857202b06e64f1f7cdc083dec9 //查看该commit id代表的操作内容
+git show ba3ab086a5c1c0857202b06e64f1f7cdc083dec9 //查看该commit id代表的操作内容//选最上面的
 ————————————————————
-如果提交commit之后发现有错误，可以用reset命令把文件撤回
+如果提交commit之后发现有错误，可以用reset命令把文件撤回//选最下面的
 git reset c5eeccbb8472b6eaba13813205546891c9dcdd97
 ____________________________________________________
 把当前所有东西都再次添加进去
 git add .
 _____________________________________________________
+push 文件到远端
+git push
+___________________________________
+cmd里面cls清空界面
+——————————————————————
+git clone (这里是复制的SSH密钥) other
+就会在工作区创建other文件，并把东西下载下来
+————————————————————
+创建分支
+git branch branch1
+__________________________
+查看分支
+git checkout branch1
+________________________
 
