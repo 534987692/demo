@@ -1,0 +1,34 @@
+$ ls -al ~/.ssh
+查看密钥
+$ cd demo/
+打开到demo下
+$ git status
+查看该工作区文件demo下的文件有没有上传（红色为未上传）
+$ git add Tina.txt
+上传Tina.txt到暂存区
+$ git commit -m "first commit"
+上传到commit，提示信息：first commit
+但是会提示需要先输入账号和用户名
+$ git config --global user.email "slp987692@163.com"         //输入账号
+$ git config --global user.name "Tina"          //输入用户名
+$ git commit -m "first commit"       //提交到commit
+——————————————————————
+git log //显示日志
+_________________________结果：
+commit ba3ab086a5c1c0857202b06e64f1f7cdc083dec9 (HEAD -> master)
+Author: Tina <slp987692@163.com>
+Date:   Sat Jan 18 15:32:16 2020 +0800
+
+    first commit
+
+commit c5eeccbb8472b6eaba13813205546891c9dcdd97 (origin/master, origin/HEAD)
+Author: 534987692 <49134575+534987692@users.noreply.github.com>
+Date:   Sat Jan 18 14:50:14 2020 +0800
+————————————————————
+git show ba3ab086a5c1c0857202b06e64f1f7cdc083dec9 //查看该commit id代表的操作内容
+————————————————————
+如果提交commit之后发现有错误，可以用reset命令把文件撤回
+git reset c5eeccbb8472b6eaba13813205546891c9dcdd97
+
+
+
