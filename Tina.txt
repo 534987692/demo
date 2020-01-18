@@ -45,10 +45,23 @@ git clone (这里是复制的SSH密钥) other
 就会在工作区创建other文件，并把东西下载下来
 ————————————————————
 创建分支
-git branch branch1
+git branch branch01
 __________________________
 查看分支
 git checkout branch1
 ________________________
-
+但是在提交文件push时会发现提示并未设置远端branch,
+所以要设置远端branch，同时push
+git push --set-upstream origin branch01
+****************下面是显示结果（表示在分支branch01前又创建了一个远端branch01）******************
+To github.com:534987692/demo.git
+ * [new branch]      branch01 -> branch01
+Branch 'branch01' set up to track remote branch 'branch01' from 'origin'.
+——————————————————————————————————
+git checkout -b branch02
+表示检查并创建新的分支branch02
+————————————————————————————————
+git checkout master
+表示切换到主分支
+——————————————————————————
 
