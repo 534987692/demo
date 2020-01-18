@@ -64,4 +64,17 @@ git checkout -b branch02
 git checkout master
 表示切换到主分支
 ——————————————————————————
+git merge branch01
+表示把branch01的文件合并融入到当前分支
+——————————————————————
+在同过idea解决合并的矛盾问题时打开当前的文件，点击下方菜单栏的Terminal，可以直接输入git status,查看当前情况
+————————————————————
+然后再项目根目录点击右键，选择Git，然后看到很多语句
+选择resolve conflicts… （revert表示回滚）
+然后双击yours(masters),就会loading file
+loading完之后，就会弹出窗口，可以看到不同分支的版本，进行修改。最后apply
+————————————————————
+当有不希望被管理的文件时，打开idea的看到根目录下的.idea文件，右键—>Git—>Repository—>ignore
+或者，点击.gitignore文件，在最上面加上一行：.idea/
+
 
