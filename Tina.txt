@@ -64,6 +64,7 @@ git checkout -b branch02
 git checkout master
 表示切换到主分支
 ——————————————————————————
+<<<<<<< HEAD
 git merge branch01
 表示把branch01的文件合并融入到当前分支
 ——————————————————————
@@ -77,4 +78,6 @@ loading完之后，就会弹出窗口，可以看到不同分支的版本，进行修改。最后apply
 当有不希望被管理的文件时，打开idea的看到根目录下的.idea文件，右键—>Git—>Repository—>ignore
 或者，点击.gitignore文件，在最上面加上一行：.idea/
 
+=======
+>>>>>>> a8192f9f1b4d116fd86e12996403a9b6bd5d6147
 
